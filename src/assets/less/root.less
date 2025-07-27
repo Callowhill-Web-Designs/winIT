@@ -18,7 +18,7 @@
         --secondary: #1A2B3C;
         --secondaryLight: #ffba43;
         --headerColor: #1a1a1a;
-        --bodyTextColor: #4e4b66;
+        --bodyTextColor: #172941;
         --bodyTextColorWhite: #fafbfc;
 
         /* Dark Mode Styles */
@@ -193,6 +193,71 @@
             transition: width 0.3s;
         }
     }
+
+    .cs-button-squared {
+        width: auto;
+        text-align: center;
+        font-size: (16/16rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 8vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        min-width: (174/16rem);
+        margin: auto;
+        color: #fff;
+        padding: 0 0 0 (24/16rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        background-color: #1a1a1a;
+        display: inline-flex;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: (24/16rem);
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+
+        .cs-button-wrapper {
+            width: (44/16rem);
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            position: relative;
+
+            &:before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: var(--primary);
+                opacity: 1;
+                position: absolute;
+                display: block;
+                bottom: 0;
+                right: 0;
+                transition: width 0.3s;
+                z-index: -1;
+            }
+        }
+
+        .cs-button-icon {
+            width: (24/16rem);
+            height: (24/16rem);
+        }
+
+        &:hover {
+            color: #fff;
+            .cs-button-wrapper {
+                &:before {
+                    width: 0%;
+                }
+            }
+        }
+    }
+
+    
+                                    
 
     // Utilities - small classes useful in various common situations
     .cs-color {
@@ -742,7 +807,7 @@ html {
         }
 
         .cs-logo {
-            width: (209/16rem);
+            width: (260/16rem);
             height: auto;
             margin: 0 auto 0 0;
             padding: 0;
@@ -1027,7 +1092,7 @@ html {
             }
         }
 
-        .cs-button-solid {
+        .cs-button-squared {
             display: none;
         }
     }
@@ -1446,8 +1511,8 @@ html {
         }
 
         .cs-logo {
-            width: 18.4%;
-            height: (40/16rem);
+            width: 25%;
+            height: (48/16rem);
             /* margin-right auto pushes everything away from it to the right */
             margin: 0 auto 0 0;
             padding: 0;
@@ -1542,46 +1607,9 @@ html {
             }
         }
 
-        .cs-button-solid {
-            font-size: (16/16rem);
-            /* 46px - 56px */
-            line-height: clamp(2.875em, 5.5vw, 3.5em);
-            text-decoration: none;
-            font-weight: 700;
-            text-align: center;
+        .cs-button-squared {
             margin: 0;
-            color: #fff;
-            min-width: (150/16rem);
-            padding: 0 (32/16rem);
-            border-radius: (48/16rem);
             overflow: hidden;
-            background-color: var(--primary);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-            transition: color 0.3s;
-
-            &:before {
-                content: "";
-                position: absolute;
-                height: 100%;
-                width: 0%;
-                background: #fff;
-                opacity: 1;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                transition: width 0.3s;
-            }
-
-            &:hover {
-                color: #1a1a1a;
-                &:before {
-                    width: 100%;
-                }
-            }
         }
 
         .cs-nav-button {
