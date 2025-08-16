@@ -1,200 +1,696 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// PAGE STYLES
-// Interior pages have their own stylesheet for styles that only exist on
-// that page. Any styles shared between pages, including repeated sections,
-// should go into root.less
+// ABOUT PAGE STYLES
+// Styles for the about page including our story and team sections
 // ─────────────────────────────────────────────────────────────────────────────
 
 /*-- -------------------------- -->
-<---       Side By Side         -->
+<---        Our Story           -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #RPsbs-313 {
+    #our-story {
         padding: var(--sectionPadding);
+        padding-top: (200/16rem);
+        position: relative;
+        overflow: hidden;
 
         .cs-container {
             width: 100%;
             max-width: (1280/16rem);
             margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
+            position: relative;
+            z-index: 10;
         }
 
         .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: left;
             width: 100%;
-            max-width: (542/16rem);
             display: flex;
             flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: flex-start;
+            align-items: center;
+            gap: clamp(3rem, 6vw, 5rem);
+        }
+
+        .cs-story-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: (48/16rem);
+        }
+
+        .cs-text-wrapper {
+            width: 100%;
+            max-width: (800/16rem);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cs-topper {
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: (20/16rem);
+            color: var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: (12/16rem);
+        }
+
+        .cs-circuit-icon {
+            width: (20/16rem);
+            height: auto;
+            color: var(--primary);
+            opacity: 0.8;
+        }
+
+        .cs-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.2em;
+            text-align: center;
+            margin: 0 0 (24/16rem) 0;
+            color: var(--headerColor);
+        }
+
+        .cs-accent {
+            background: linear-gradient(135deg, var(--primary) 0%, #60D8FF 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
         }
 
         .cs-text {
-            margin-bottom: (16/16rem);
+            font-size: clamp(1rem, 2vw, 1.125rem);
+            line-height: 1.6em;
+            text-align: center;
+            margin: 0 0 (24/16rem) 0;
+            color: rgba(255, 255, 255, 0.8);
+
             &:last-of-type {
-                margin-bottom: (32/16rem);
+                margin-bottom: 0;
             }
         }
 
-        .cs-quote {
-            margin: 0 0 (32/16rem) 0;
-            /* 16px - 32px */
-            padding: clamp(1rem, 3vw, 2rem);
-            background-color: #f7f7f7;
+        .cs-story-stats {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: (20/16rem);
+        }
+
+        .cs-stat-item {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
             border-radius: (16/16rem);
-            position: relative;
-        }
+            padding: (24/16rem) (20/16rem);
+            text-align: center;
+            border: 1px solid rgba(65, 191, 252, 0.2);
+            transition: all 0.3s ease;
 
-        .cs-quote-text {
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
-            line-height: 1.5em;
-            margin: 0 0 (16/16rem);
-            color: #767676;
-            display: block;
-        }
-
-        .cs-name {
-            font-size: (16/16rem);
-            line-height: 1.2em;
-            text-transform: uppercase;
-            font-weight: bold;
-            margin: 0 0 (4/16rem);
-            color: var(--headerColor);
-            display: block;
-        }
-
-        .cs-job {
-            font-size: (14/16rem);
-            line-height: 1.5em;
-            color: #767676;
-            display: block;
-        }
-
-        .cs-quote-icon {
-            /* 60px - 136px */
-            width: clamp(3.75rem, 10vw, 8.5rem);
-            height: auto;
-            position: absolute;
-            bottom: (0/16rem);
-            /* 16px - 32px */
-            right: clamp(1rem, 4vw, 2rem);
-        }
-
-        .cs-image-group {
-            /* scaling the font size with the view width */
-            font-size: ~"min(2.31vw, .7em)";
-            /* using ems so we can use font size to scale the whole section */
-            width: (631/16em);
-            height: (636/16em);
-            position: relative;
-        }
-
-        .cs-picture {
-            border-radius: (24/16em);
-            /* clips img tag corners */
-            overflow: hidden;
-            position: absolute;
-            display: block;
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                /* makes image act like a background image */
-                object-fit: cover;
+            &:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 12px 32px rgba(65, 191, 252, 0.15);
             }
         }
 
-        .cs-picture1 {
-            width: (522/16em);
-            height: (581/16em);
-            left: 0;
-            top: 0;
+        .cs-stat-number {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 800;
+            line-height: 1em;
+            color: var(--primary);
+            font-family: var(--headerFont);
+            margin-bottom: (8/16rem);
+            display: block;
+            transition: all 0.3s ease;
+            
+            &.animated {
+                animation: glow 0.5s ease-in-out;
+            }
         }
 
-        .cs-picture2 {
-            width: (414/16em);
-            height: (400/16em);
-            background-color: #fff;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
-            /* 6px - 12px */
-            border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
-            right: 0;
-            bottom: 0;
+        .cs-stat-label {
+            font-size: (12/16rem);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255, 255, 255, 0.7);
+            display: block;
+        }
+
+        .cs-background-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .cs-floating-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .cs-shape {
+            position: absolute;
+            background: linear-gradient(135deg, var(--primary), #60D8FF);
+            border-radius: 50%;
+            opacity: 0.05;
+            animation: float 8s ease-in-out infinite;
+
+            &.cs-shape-1 {
+                width: 60px;
+                height: 60px;
+                top: 20%;
+                left: 10%;
+                animation-delay: 0s;
+            }
+
+            &.cs-shape-2 {
+                width: 40px;
+                height: 40px;
+                top: 60%;
+                right: 15%;
+                animation-delay: 3s;
+            }
+
+            &.cs-shape-3 {
+                width: 80px;
+                height: 80px;
+                top: 40%;
+                right: 10%;
+                animation-delay: 6s;
+            }
+        }
+    }
+}
+
+/* Tablet - 480px */
+@media only screen and (min-width: 30rem) {
+    #our-story {
+        .cs-story-stats {
+            grid-template-columns: repeat(2, 1fr);
+            gap: (24/16rem);
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #our-story {
+        .cs-story-stats {
+            grid-template-columns: repeat(4, 1fr);
+            gap: (20/16rem);
+        }
+
+        .cs-stat-item {
+            padding: (20/16rem) (16/16rem);
         }
     }
 }
 
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-    #RPsbs-313 {
+    #our-story {
+        .cs-story-wrapper {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: (64/16rem);
+            max-width: (1200/16rem);
+        }
+
+        .cs-text-wrapper {
+            flex: 1;
+            max-width: none;
+            text-align: left;
+            align-items: flex-start;
+        }
+
+        .cs-topper {
+            justify-content: flex-start;
+        }
+
+        .cs-title {
+            text-align: left;
+        }
+
+        .cs-text {
+            text-align: left;
+        }
+
+        .cs-story-stats {
+            flex-shrink: 0;
+            width: (280/16rem);
+            grid-template-columns: 1fr;
+            gap: (16/16rem);
+        }
+
+        .cs-stat-item {
+            padding: (24/16rem) (20/16rem);
+        }
+
+        .cs-stat-number {
+            font-size: (2rem);
+        }
+
+        .cs-stat-label {
+            font-size: (13/16rem);
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---        Our Team            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #our-team {
+        padding: var(--sectionPadding);
+        position: relative;
+        overflow: hidden;
+
         .cs-container {
-            flex-flow: row;
-            justify-content: space-between;
-            gap: (52/16rem);
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            position: relative;
+            z-index: 10;
         }
 
-        .cs-image-group {
-            font-size: ~"min(1.2vw, 1em)";
-            flex: none;
+        .cs-text-wrapper {
+            width: 100%;
+            max-width: (700/16rem);
+            margin: 0 auto (64/16rem);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .cs-content {
+        .cs-topper {
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: (20/16rem);
+            color: var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: (12/16rem);
+        }
+
+        .cs-circuit-icon {
+            width: (20/16rem);
+            height: auto;
+            color: var(--primary);
+            opacity: 0.8;
+        }
+
+        .cs-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.2em;
+            text-align: center;
+            margin: 0 0 (24/16rem) 0;
+            color: var(--headerColor);
+        }
+
+        .cs-accent {
+            background: linear-gradient(135deg, var(--primary) 0%, #60D8FF 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .cs-text {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            line-height: 1.6em;
+            text-align: center;
             margin: 0;
+            color: rgba(255, 255, 255, 0.8);
         }
+
+        .cs-team-grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: (48/16rem);
+            margin-bottom: (64/16rem);
+        }
+
+        .cs-team-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: (24/16rem);
+            padding: (32/16rem);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(65, 191, 252, 0.2);
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 4px;
+                background: linear-gradient(90deg, var(--primary) 0%, #60D8FF 100%);
+                transform: scaleX(0);
+                transition: transform 0.3s ease;
+            }
+
+            &:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 16px 48px rgba(65, 191, 252, 0.15);
+
+                &::before {
+                    transform: scaleX(1);
+                }
+
+                .cs-team-image {
+                    transform: scale(1.05);
+                }
+
+                .cs-team-overlay {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .cs-team-image {
+            width: (200/16rem);
+            height: (200/16rem);
+            margin: 0 auto (24/16rem);
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s ease;
+            border: 4px solid var(--primary);
+
+            picture {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        .cs-team-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(65, 191, 252, 0.8);
+            backdrop-filter: blur(4px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .cs-team-social {
+            display: flex;
+            gap: (16/16rem);
+        }
+
+        .cs-social-link {
+            width: (40/16rem);
+            height: (40/16rem);
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: white;
+                color: var(--primary);
+                transform: scale(1.1);
+            }
+
+            svg {
+                width: (20/16rem);
+                height: (20/16rem);
+            }
+        }
+
+        .cs-team-info {
+            text-align: center;
+        }
+
+        .cs-team-name {
+            font-size: (24/16rem);
+            font-weight: 700;
+            line-height: 1.3em;
+            margin: 0 0 (8/16rem) 0;
+            color: #fff;
+        }
+
+        .cs-team-position {
+            font-size: (16/16rem);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin: 0 0 (16/16rem) 0;
+            color: var(--primary);
+        }
+
+        .cs-team-bio {
+            font-size: (16/16rem);
+            line-height: 1.5em;
+            margin: 0;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .cs-button-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cs-button-primary {
+            font-size: (16/16rem);
+            font-weight: 600;
+            line-height: 1em;
+            text-decoration: none;
+            text-align: center;
+            color: #fff;
+            min-width: (250/16rem);
+            padding: (18/16rem) (32/16rem);
+            background: linear-gradient(135deg, var(--primary) 0%, #60D8FF 100%);
+            border-radius: (8/16rem);
+            box-shadow: 0 8px 32px rgba(65, 191, 252, 0.3);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: (12/16rem);
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+            overflow: hidden;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(135deg, #60D8FF 0%, var(--primary) 100%);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                z-index: -1;
+            }
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 12px 40px rgba(65, 191, 252, 0.4);
+
+                &:before {
+                    opacity: 1;
+                }
+
+                .cs-arrow {
+                    transform: translateX(4px);
+                }
+            }
+
+            .cs-arrow {
+                width: (16/16rem);
+                height: auto;
+                transition: transform 0.3s ease;
+            }
+        }
+
+        .cs-background-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .cs-floating-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .cs-shape {
+            position: absolute;
+            background: linear-gradient(135deg, var(--primary), #60D8FF);
+            border-radius: 50%;
+            opacity: 0.05;
+            animation: float 8s ease-in-out infinite;
+
+            &.cs-shape-1 {
+                width: 60px;
+                height: 60px;
+                top: 20%;
+                left: 10%;
+                animation-delay: 0s;
+            }
+
+            &.cs-shape-2 {
+                width: 40px;
+                height: 40px;
+                top: 70%;
+                right: 15%;
+                animation-delay: 3s;
+            }
+
+            &.cs-shape-3 {
+                width: 80px;
+                height: 80px;
+                top: 50%;
+                right: 10%;
+                animation-delay: 6s;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #our-team {
+        .cs-team-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: (48/16rem);
+        }
+
+        .cs-team-image {
+            width: (240/16rem);
+            height: (240/16rem);
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #our-team {
+        .cs-team-card {
+            padding: (48/16rem);
+        }
+
+        .cs-team-image {
+            width: (280/16rem);
+            height: (280/16rem);
+            margin-bottom: (32/16rem);
+        }
+    }
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes seamlessGridMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(50px, 50px);
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px var(--primary);
+        transform: scale(1);
+    }
+    50% {
+        text-shadow: 0 0 15px var(--primary), 0 0 25px var(--primary);
+        transform: scale(1.05);
+    }
+    100% {
+        text-shadow: 0 0 5px var(--primary);
+        transform: scale(1);
     }
 }
 
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #RPsbs-313 {
-            .cs-image-group {
-                &:before,
-                &:after {
-                    background: var(--accent);
-                }
-            }
-
-            .cs-picture2 {
-                background-color: var(--dark);
-                /* 6px - 12px */
-                border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
-            }
-
+        #our-story,
+        #our-team {
             .cs-topper {
                 color: var(--primaryLight);
             }
 
             .cs-title,
             .cs-text,
-            .cs-h3,
-            .cs-quote-text,
-            .cs-name {
+            .cs-team-name,
+            .cs-team-bio {
                 color: var(--bodyTextColorWhite);
             }
 
-            .cs-quote {
-                background-color: var(--accent);
+            .cs-team-position {
+                color: var(--primaryLight);
             }
 
-            .cs-job {
+            .cs-stat-label {
                 color: var(--bodyTextColorWhite);
                 opacity: 0.8;
-            }
-
-            .cs-quote-icon {
-                opacity: 0.2;
             }
         }
     }

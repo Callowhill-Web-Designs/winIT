@@ -1,104 +1,196 @@
 ---
-title: "About | Code Stitch Web Designs"
-description: "Meta description for the page"
+title: "About | WinIT Consulting"
+description: "Learn about WinIT Consulting's story and meet our expert IT team"
 permalink: "/about/"
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}"/>
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | avif %}"/>
     <link rel="stylesheet" href="/assets/css/about.css">
+    <script defer src="/assets/js/about-animations.js"></script>
 {% endblock %}
 
 {% block body %}
 
     <!-- ============================================ -->
-    <!--                   Banner                     -->
+    <!--                 Our Story                    -->
     <!-- ============================================ -->
 
-    <div id="banner-310">
+    <section id="our-story">
         <div class="cs-container">
-            <span class="cs-int-title">About Us</span>
-            <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Home</a>
-                <a href="/about/" class="cs-link cs-active">About Us</a>
+            <div class="cs-content">
+                <div class="cs-story-wrapper">
+                    <div class="cs-text-wrapper">
+                        <span class="cs-topper">
+                            <svg class="cs-circuit-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 2L18 8L10 14L2 8L10 2Z" stroke="currentColor" stroke-width="1"/>
+                                <path d="M10 14V18M2 8V12L10 18L18 12V8" stroke="currentColor" stroke-width="1"/>
+                                <circle cx="10" cy="8" r="2" fill="currentColor"/>
+                            </svg>
+                            Our Story
+                            <svg class="cs-circuit-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 2L18 8L10 14L2 8L10 2Z" stroke="currentColor" stroke-width="1"/>
+                                <path d="M10 14V18M2 8V12L10 18L18 12V8" stroke="currentColor" stroke-width="1"/>
+                                <circle cx="10" cy="8" r="2" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <h2 class="cs-title">
+                            From <span class="cs-accent">Vision</span> to Innovation
+                        </h2>
+                        <p class="cs-text">
+                            At WinIT Consulting, we bring a wealth of experience and a commitment to integrity in the tech industry. Our journey began with Brian, who started building computers and assisting friends with their devices. This passion led him to work with various Managed Service Providers. Matthew, on the other hand, always knew he wanted to be in tech, naturally progressing to the role of Senior Project Engineer.
+                        </p>
+                        <p class="cs-text">
+                            Throughout our careers, we encountered a significant amount of dishonesty and confusing tech jargon, often used to cover up mistakes. This approach did not sit well with us. We believed in a better way—one that prioritizes transparency and honesty. Our mission is to provide IT consulting services rooted in open and honest communication. We believe in being upfront with our clients, even if it means admitting to mistakes and outlining steps to prevent them in the future.
+                        </p>
+                        <p class="cs-text">
+                            We collaborate with our clients to develop procedures that ensure continuous improvement and deliver the best possible experience. Our commitment to transparency extends to our internal operations as well. We prioritize fairness, equity in compensation, and opportunities for all employees. We encourage our team to share their ideas and discuss their implementation, fostering an environment where innovation thrives.
+                        </p>
+                    </div>
+
+                    <div class="cs-story-stats">
+                        <div class="cs-stat-item">
+                            <div class="cs-stat-number" data-count="15+">0</div>
+                            <span class="cs-stat-label">Years Experience</span>
+                        </div>
+                        <div class="cs-stat-item">
+                            <div class="cs-stat-number" data-count="500+">0</div>
+                            <span class="cs-stat-label">Clients Served</span>
+                        </div>
+                        <div class="cs-stat-item">
+                            <div class="cs-stat-number" data-count="99.9%">0</div>
+                            <span class="cs-stat-label">Uptime Achieved</span>
+                        </div>
+                        <div class="cs-stat-item">
+                            <div class="cs-stat-number" data-count="24/7">24/7</div>
+                            <span class="cs-stat-label">Support Available</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <!--Background Image-->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
-        </picture>
-    </div>
 
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
-
-    <section id="RPsbs-313">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-image-group">
-                <picture class="cs-picture cs-picture1">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="lawyers" width="522" height="581" decoding="async">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" alt="gavel" width="390" height="376" loading="lazy" decoding="async">
-                </picture>
+        <!-- Background Elements -->
+        <div class="cs-background-elements">
+            <div class="cs-floating-shapes">
+                <div class="cs-shape cs-shape-1"></div>
+                <div class="cs-shape cs-shape-2"></div>
+                <div class="cs-shape cs-shape-3"></div>
             </div>
-            <!-- Right Content Section-->
-            <div class="cs-content">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About CodeStitch</h2>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                 Our Team                     -->
+    <!-- ============================================ -->
+
+    <section id="our-team">
+        <div class="cs-container">
+            <div class="cs-text-wrapper">
+                <span class="cs-topper">
+                    <svg class="cs-circuit-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1"/>
+                        <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="currentColor" stroke-width="1"/>
+                        <circle cx="16" cy="6" r="3" stroke="currentColor" stroke-width="1"/>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="1"/>
+                    </svg>
+                    Our Team
+                    <svg class="cs-circuit-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1"/>
+                        <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="currentColor" stroke-width="1"/>
+                        <circle cx="16" cy="6" r="3" stroke="currentColor" stroke-width="1"/>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="1"/>
+                    </svg>
+                </span>
+                <h2 class="cs-title">
+                    Meet the <span class="cs-accent">Experts</span> Behind Your Success
+                </h2>
                 <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
+                    Our team of certified IT professionals brings decades of combined experience in enterprise technology, cybersecurity, and digital transformation. We're passionate about technology and dedicated to your success.
                 </p>
-                <div class="cs-quote">
-                    <span class="cs-quote-text">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </span>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="/assets/svgs/quote.svg" alt="gavel" width="136" height="77">
+            </div>
+
+            <div class="cs-team-grid">
+                <!-- Team Member 1 -->
+                <div class="cs-team-card">
+                    <div class="cs-team-image">
+                        <picture>
+                            <img src="/assets/images/brian.png" alt="Brian Thompson" width="300" height="400" loading="lazy" decoding="async">
+                        </picture>
+                        <div class="cs-team-overlay">
+                            <div class="cs-team-social">
+                                <a href="#" class="cs-social-link" aria-label="LinkedIn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="cs-social-link" aria-label="Email">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
+                                        <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-team-info">
+                        <h3 class="cs-team-name">Brian Thompson</h3>
+                        <p class="cs-team-position">Chief Technology Officer</p>
+                        <p class="cs-team-bio">
+                            With over 12 years in enterprise IT and cybersecurity, Brian leads our technical strategy and ensures our clients receive cutting-edge solutions. He holds multiple certifications including CISSP and AWS Solutions Architect.
+                        </p>
+                    </div>
                 </div>
-                <a href="/contact/" class="cs-button-solid">Get in Touch</a>
+
+                <!-- Team Member 2 -->
+                <div class="cs-team-card">
+                    <div class="cs-team-image">
+                        <picture>
+                            <img src="/assets/images/jacob.png" alt="Jacob Martinez" width="300" height="400" loading="lazy" decoding="async">
+                        </picture>
+                        <div class="cs-team-overlay">
+                            <div class="cs-team-social">
+                                <a href="#" class="cs-social-link" aria-label="LinkedIn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="cs-social-link" aria-label="Email">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
+                                        <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-team-info">
+                        <h3 class="cs-team-name">Jacob Martinez</h3>
+                        <p class="cs-team-position">Senior Systems Engineer</p>
+                        <p class="cs-team-bio">
+                            Jacob specializes in cloud infrastructure and network architecture. With expertise in Microsoft 365, Google Workspace, and AWS, he ensures our clients' systems are scalable, secure, and optimized for performance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cs-button-group">
+                <a href="/contact" class="cs-button-primary" aria-label="Contact WinIT Team">
+                    Work With Our Team
+                    <svg class="cs-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 1L15 8L8 15M15 8H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Background Elements -->
+        <div class="cs-background-elements">
+            <div class="cs-floating-shapes">
+                <div class="cs-shape cs-shape-1"></div>
+                <div class="cs-shape cs-shape-2"></div>
+                <div class="cs-shape cs-shape-3"></div>
             </div>
         </div>
     </section>
