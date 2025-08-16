@@ -22,6 +22,9 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
         <link rel="stylesheet" href="/assets/css/local.css"/>
     {% endif %}
 
+    <!-- Hero animations script -->
+    <script defer src="/assets/js/hero-animations.js"></script>
+
     <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
     <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
     <!-- {% include "components/home-schema.html" %} -->
@@ -33,282 +36,377 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
     <!--                    Hero                      -->
     <!-- ============================================ -->
 
-    <section id="hero-1620">
+    <section id="hero-tech">
         <div class="cs-container">
             <div class="cs-content">
-                <span class="cs-topper">
-                    <svg class="cs-chevron" width="49" height="15" viewBox="0 0 49 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g opacity="0.7">
-                        <path d="M0.621948 7.49889L6.40262 15L10.343 15L4.56231 7.49889L10.343 -4.2492e-07L6.40262 -2.52681e-07L0.621948 7.49889Z" fill="var(--chevronColor)"/>
-                        <path d="M7.62195 7.49889L13.4026 15L17.343 15L11.5623 7.49889L17.343 -4.2492e-07L13.4026 -2.52681e-07L7.62195 7.49889Z" fill="var(--chevronColor)"/>
-                        <path d="M14.7789 7.49889L20.5596 15L24.5 15L18.7193 7.49889L24.5 -4.2492e-07L20.5596 -2.52681e-07L14.7789 7.49889Z" fill="var(--chevronColor)"/>
-                        <path d="M22.7789 7.49889L28.5596 15L32.5 15L26.7193 7.49889L32.5 -4.2492e-07L28.5596 -2.52681e-07L22.7789 7.49889Z" fill="var(--chevronColor)"/>
-                        <path d="M30.7789 7.49889L36.5596 15L40.5 15L34.7193 7.49889L40.5 -4.2492e-07L36.5596 -2.52681e-07L30.7789 7.49889Z" fill="var(--chevronColor)"/>
-                        <path d="M38.7789 7.49889L44.5596 15L48.5 15L42.7193 7.49889L48.5 -4.2492e-07L44.5596 -2.52681e-07L38.7789 7.49889Z" fill="var(--chevronColor)"/>
-                        </g>
-                    </svg>
-                    Secure Your Business Infrastructure
-                    <svg class="cs-chevron" width="49" height="15" viewBox="0 0 49 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g opacity="0.7">
-                        <path d="M48.3781 7.49889L42.5974 15L38.657 15L44.4377 7.49889L38.657 -4.2492e-07L42.5974 -2.52681e-07L48.3781 7.49889Z" fill="var(--chevronColor)"/>
-                        <path d="M41.3781 7.49889L35.5974 15L31.657 15L37.4377 7.49889L31.657 -4.2492e-07L35.5974 -2.52681e-07L41.3781 7.49889Z" fill="var(--chevronColor)"/>
-                        <path d="M34.2211 7.49889L28.4404 15L24.5 15L30.2807 7.49889L24.5 -4.2492e-07L28.4404 -2.52681e-07L34.2211 7.49889Z" fill="var(--chevronColor)"/>
-                        <path d="M26.2211 7.49889L20.4404 15L16.5 15L22.2807 7.49889L16.5 -4.2492e-07L20.4404 -2.52681e-07L26.2211 7.49889Z" fill="var(--chevronColor)"/>
-                        <path d="M18.2211 7.49889L12.4404 15L8.50004 15L14.2807 7.49889L8.50004 -4.2492e-07L12.4404 -2.52681e-07L18.2211 7.49889Z" fill="var(--chevronColor)"/>
-                        <path d="M10.2211 7.49889L4.4404 15L0.500041 15L6.28071 7.49889L0.500042 -4.2492e-07L4.4404 -2.52681e-07L10.2211 7.49889Z" fill="var(--chevronColor)"/>
-                        </g>
-                    </svg>
-                </span>
-                <h1 class="cs-title">
-                    Elevate Your IT With Our Open & Uncompromised Support</h1>
-                <a href="/contact" class="cs-button-squared" aria-label="Contact WinIT Consulting">
-                    Secure Your Business Today
-                    <!--SVG Arrow-->
-                    <div class="cs-button-wrapper">
-                        <svg class="cs-button-icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.92 11.62C17.8724 11.4973 17.801 11.3851 17.71 11.29L12.71 6.29C12.6168 6.19676 12.5061 6.1228 12.3842 6.07234C12.2624 6.02188 12.1319 5.99591 12 5.99591C11.7337 5.99591 11.4783 6.1017 11.29 6.29C11.1968 6.38324 11.1228 6.49393 11.0723 6.61575C11.0219 6.73758 10.9959 6.86814 10.9959 7C10.9959 7.2663 11.1017 7.5217 11.29 7.71L14.59 11H7C6.73478 11 6.48043 11.1054 6.29289 11.2929C6.10536 11.4804 6 11.7348 6 12C6 12.2652 6.10536 12.5196 6.29289 12.7071C6.48043 12.8946 6.73478 13 7 13H14.59L11.29 16.29C11.1963 16.383 11.1219 16.4936 11.0711 16.6154C11.0203 16.7373 10.9942 16.868 10.9942 17C10.9942 17.132 11.0203 17.2627 11.0711 17.3846C11.1219 17.5064 11.1963 17.617 11.29 17.71C11.383 17.8037 11.4936 17.8781 11.6154 17.9289C11.7373 17.9797 11.868 18.0058 12 18.0058C12.132 18.0058 12.2627 17.9797 12.3846 17.9289C12.5064 17.8781 12.617 17.8037 12.71 17.71L17.71 12.71C17.801 12.6149 17.8724 12.5028 17.92 12.38C18.02 12.1365 18.02 11.8635 17.92 11.62Z" fill="#fff"/>
+                <div class="cs-text-wrapper">
+                    <span class="cs-topper">
+                        <svg class="cs-circuit-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="3" cy="3" r="2" stroke="currentColor" stroke-width="1"/>
+                            <circle cx="17" cy="17" r="2" stroke="currentColor" stroke-width="1"/>
+                            <circle cx="17" cy="3" r="2" stroke="currentColor" stroke-width="1"/>
+                            <circle cx="3" cy="17" r="2" stroke="currentColor" stroke-width="1"/>
+                            <path d="M5 3h8M3 5v8M15 3v8M17 5h-8M5 17h8M3 15v-8" stroke="currentColor" stroke-width="1"/>
+                        </svg>
+                        Next-Generation IT Solutions
+                        <svg class="cs-circuit-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="3" cy="3" r="2" stroke="currentColor" stroke-width="1"/>
+                            <circle cx="17" cy="17" r="2" stroke="currentColor" stroke-width="1"/>
+                            <circle cx="17" cy="3" r="2" stroke="currentColor" stroke-width="1"/>
+                            <circle cx="3" cy="17" r="2" stroke="currentColor" stroke-width="1"/>
+                            <path d="M5 3h8M3 5v8M15 3v8M17 5h-8M5 17h8M3 15v-8" stroke="currentColor" stroke-width="1"/>
+                        </svg>
+                    </span>
+                    <h1 class="cs-title">
+                        Transform Your Business with <span class="cs-accent">Cutting-Edge</span> IT Infrastructure
+                    </h1>
+                    <p class="cs-text">
+                        Empower your organization with enterprise-grade security, cloud solutions, and 24/7 monitoring that scales with your ambitions.
+                    </p>
+                    <div class="cs-button-group">
+                        <a href="/contact" class="cs-button-primary" aria-label="Contact WinIT Consulting">
+                            Start Your Digital Transformation
+                            <svg class="cs-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 1L15 8L8 15M15 8H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#services" class="cs-button-secondary">
+                            Explore Services
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Tech Stats -->
+                <div class="cs-stats">
+                    <div class="cs-stat-item">
+                        <div class="cs-stat-number" data-count="99.9">0</div>
+                        <span class="cs-stat-label">Uptime %</span>
+                    </div>
+                    <div class="cs-stat-item">
+                        <div class="cs-stat-number" data-count="24">0</div>
+                        <span class="cs-stat-label">Hour Support</span>
+                    </div>
+                    <div class="cs-stat-item">
+                        <div class="cs-stat-number" data-count="500">0</div>
+                        <span class="cs-stat-label">+ Clients</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Animated Background Elements -->
+        <div class="cs-background-animation">
+            <div class="cs-grid-overlay"></div>
+            <div class="cs-floating-elements">
+                <div class="cs-float-element cs-element-1"></div>
+                <div class="cs-float-element cs-element-2"></div>
+                <div class="cs-float-element cs-element-3"></div>
+                <div class="cs-float-element cs-element-4"></div>
+                <div class="cs-float-element cs-element-5"></div>
+                <div class="cs-float-element cs-element-6"></div>
+            </div>
+            <div class="cs-data-stream">
+                <div class="cs-stream-line cs-stream-1"></div>
+                <div class="cs-stream-line cs-stream-2"></div>
+                <div class="cs-stream-line cs-stream-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--              The WinIT Advantage            -->
+    <!-- ============================================ -->
+
+    <section id="winit-advantage">
+        <div class="cs-container">
+            <div class="cs-content">
+                <div class="cs-text-wrapper">
+                    <span class="cs-topper">
+                        <svg class="cs-circuit-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 2L18 8L10 14L2 8L10 2Z" stroke="currentColor" stroke-width="1"/>
+                            <path d="M10 14V18M2 8V12L10 18L18 12V8" stroke="currentColor" stroke-width="1"/>
+                            <circle cx="10" cy="8" r="2" fill="currentColor"/>
+                        </svg>
+                        The WinIT Advantage
+                        <svg class="cs-circuit-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 2L18 8L10 14L2 8L10 2Z" stroke="currentColor" stroke-width="1"/>
+                            <path d="M10 14V18M2 8V12L10 18L18 12V8" stroke="currentColor" stroke-width="1"/>
+                            <circle cx="10" cy="8" r="2" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <h2 class="cs-title">
+                        Where <span class="cs-accent">Innovation</span> Meets Technology
+                    </h2>
+                    <p class="cs-text">
+                        In an era where technology defines competitive advantage, WinIT stands as your trusted ally in navigating complex digital landscapes. We don't just solve problems—we architect solutions that propel your business forward.
+                    </p>
+                    <div class="cs-button-group">
+                        <a href="/contact" class="cs-button-primary" aria-label="Schedule a Consultation with WinIT">
+                            Schedule a Consultation
+                            <svg class="cs-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 1L15 8L8 15M15 8H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="/about" class="cs-button-secondary">
+                            Learn About Us
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cs-advantages-grid">
+                    <div class="cs-advantage-card">
+                        <div class="cs-advantage-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 4L36 12L20 20L4 12L20 4Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M4 18L20 26L36 18M4 26L20 34L36 26" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="20" cy="12" r="3" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="cs-advantage-title">Enterprise-Grade Security</h3>
+                        <p class="cs-advantage-text">Military-level encryption and AI-powered threat detection protect your most valuable digital assets 24/7.</p>
+                    </div>
+
+                    <div class="cs-advantage-card">
+                        <div class="cs-advantage-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 20l6 6 10-12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="20" cy="8" r="2" fill="currentColor"/>
+                                <circle cx="8" cy="24" r="2" fill="currentColor"/>
+                                <circle cx="32" cy="24" r="2" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="cs-advantage-title">Proven Track Record</h3>
+                        <p class="cs-advantage-text">Over 15 years of delivering mission-critical IT solutions to Fortune 500 companies and growing enterprises.</p>
+                    </div>
+
+                    <div class="cs-advantage-card">
+                        <div class="cs-advantage-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 8h24v24H8z" stroke="currentColor" stroke-width="2" rx="2"/>
+                                <path d="M12 16h16M12 20h16M12 24h12" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="28" cy="28" r="8" stroke="currentColor" stroke-width="2"/>
+                                <path d="M24 28l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="cs-advantage-title">Rapid Response Team</h3>
+                        <p class="cs-advantage-text">Our dedicated support engineers respond to critical issues within minutes, not hours, ensuring minimal downtime.</p>
+                    </div>
+
+                    <div class="cs-advantage-card">
+                        <div class="cs-advantage-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 8V32M8 20h24" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="2"/>
+                                <path d="M20 8L26 14L20 20L14 14L20 8Z" fill="currentColor"/>
+                                <circle cx="20" cy="32" r="4" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="cs-advantage-title">Future-Ready Solutions</h3>
+                        <p class="cs-advantage-text">Cloud-native architectures and emerging tech integration ensure your infrastructure evolves with tomorrow's demands.</p>
+                    </div>
+                </div>
+
+                <!-- Partner Logo Carousel -->
+                <div class="cs-partners-carousel">
+                    <div class="cs-carousel-label">Partnered with Industry Leaders</div>
+                    <div class="cs-carousel-wrapper">
+                        <div class="cs-carousel-track">
+                            <!-- First set of logos -->
+                            <div class="cs-logo-item">
+                                <img src="/assets/svgs/partner_company_logos/Microsoft_logo_(2012).svg" alt="Microsoft" class="cs-partner-logo">
+                            </div>
+                            <div class="cs-logo-item">
+                                <img src="/assets/svgs/partner_company_logos/Amazon_Web_Services_Logo.svg" alt="Amazon Web Services" class="cs-partner-logo">
+                            </div>
+                            <div class="cs-logo-item">
+                                <img src="/assets/svgs/partner_company_logos/Google_2015_logo.svg" alt="Google" class="cs-partner-logo">
+                            </div>
+                            <div class="cs-logo-item">
+                                <img src="/assets/svgs/partner_company_logos/Oracle_logo.svg" alt="Oracle" class="cs-partner-logo">
+                            </div>
+                            <div class="cs-logo-item">
+                                <img src="/assets/svgs/partner_company_logos/Atlassian-logo.svg" alt="Atlassian" class="cs-partner-logo">
+                            </div>
+                            <div class="cs-logo-item">
+                                <img src="/assets/svgs/partner_company_logos/Fortinet-logo-rgb-black-red.svg" alt="Fortinet" class="cs-partner-logo">
+                            </div>
+                            <div class="cs-logo-item">
+                                <img src="/assets/svgs/partner_company_logos/Cognizant_logo_2022.svg" alt="Cognizant" class="cs-partner-logo">
+                            </div>
+                            
+                            <!-- Duplicate set for seamless loop -->
+                            <div class="cs-logo-item">
+                                <img src="/assets/svgs/partner_company_logos/Microsoft_logo_(2012).svg" alt="Microsoft" class="cs-partner-logo">
+                            </div>
+                            <div class="cs-logo-item">
+                                <img src="/assets/svgs/partner_company_logos/Amazon_Web_Services_Logo.svg" alt="Amazon Web Services" class="cs-partner-logo">
+                            </div>
+                            <div class="cs-logo-item">
+                                <img src="/assets/svgs/partner_company_logos/Google_2015_logo.svg" alt="Google" class="cs-partner-logo">
+                            </div>
+                            <div class="cs-logo-item">
+                                <img src="/assets/svgs/partner_company_logos/Oracle_logo.svg" alt="Oracle" class="cs-partner-logo">
+                            </div>
+                            <div class="cs-logo-item">
+                                <img src="/assets/svgs/partner_company_logos/Atlassian-logo.svg" alt="Atlassian" class="cs-partner-logo">
+                            </div>
+                            <div class="cs-logo-item">
+                                <img src="/assets/svgs/partner_company_logos/Fortinet-logo-rgb-black-red.svg" alt="Fortinet" class="cs-partner-logo">
+                            </div>
+                            <div class="cs-logo-item">
+                                <img src="/assets/svgs/partner_company_logos/Cognizant_logo_2022.svg" alt="Cognizant" class="cs-partner-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Elements -->
+        <div class="cs-background-elements">
+            <div class="cs-grid-pattern"></div>
+            <div class="cs-floating-shapes">
+                <div class="cs-shape cs-shape-1"></div>
+                <div class="cs-shape cs-shape-2"></div>
+                <div class="cs-shape cs-shape-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                 Services                     -->
+    <!-- ============================================ -->
+
+    <section id="services">
+        <div class="cs-container">
+            <div class="cs-content">
+                <div class="cs-text-wrapper">
+                    <span class="cs-topper">
+                        <svg class="cs-circuit-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1"/>
+                            <path d="M6 10h8M10 6v8" stroke="currentColor" stroke-width="1"/>
+                            <circle cx="6" cy="6" r="2" fill="currentColor"/>
+                            <circle cx="14" cy="14" r="2" fill="currentColor"/>
+                        </svg>
+                        Our Core Services
+                        <svg class="cs-circuit-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1"/>
+                            <path d="M6 10h8M10 6v8" stroke="currentColor" stroke-width="1"/>
+                            <circle cx="6" cy="6" r="2" fill="currentColor"/>
+                            <circle cx="14" cy="14" r="2" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    <h2 class="cs-title">
+                        Comprehensive IT Solutions That <span class="cs-accent">Drive</span> Business Success
+                    </h2>
+                    <p class="cs-text">
+                        From strategic consulting to hands-on technical support, our expert team delivers tailored IT services that enhance productivity, strengthen security, and accelerate growth across your entire organization.
+                    </p>
+                    </div>
+            
+            <div class="cs-services-grid">
+                <!-- Strategic IT Leadership -->
+                <div class="cs-service-card cs-blue-card">
+                    <div class="cs-service-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 6L32 12V28L20 34L8 28V12L20 6Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 12L20 18L32 12M20 18V34" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="20" cy="15" r="3" stroke="currentColor" stroke-width="2"/>
                         </svg>
                     </div>
-                </a>
-                <!--Bottom Corners-->
-                <div class="cs-corners" aria-hidden="true"></div>
+                    <h3 class="cs-service-title">Strategic IT Leadership</h3>
+                    <p class="cs-service-text">Virtual CIO services and strategic IT consulting to align technology with your business goals. We provide executive-level guidance and project management to drive digital transformation.</p>
+                </div>
+
+                <!-- 24/7 Support & Management -->
+                <div class="cs-service-card cs-blue-card">
+                    <div class="cs-service-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 20l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="20" cy="6" r="2" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="6" cy="26" r="2" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="34" cy="26" r="2" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="cs-service-title">24/7 Support & Management</h3>
+                    <p class="cs-service-text">Round-the-clock helpdesk support and proactive system monitoring. Our team ensures your IT infrastructure runs smoothly with minimal downtime and rapid issue resolution.</p>
+                </div>
+
+                <!-- Cloud & Workspace Solutions -->
+                <div class="cs-service-card cs-blue-card">
+                    <div class="cs-service-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 22c-3 0-5-2-5-4s2-4 5-4c0-4 3-7 7-7s7 3 7 7h1c3 0 5 2 5 4s-2 4-5 4" stroke="currentColor" stroke-width="2"/>
+                            <path d="M15 26l5-5 5 5M20 21v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="10" cy="32" r="1.5" stroke="currentColor" stroke-width="1"/>
+                            <circle cx="20" cy="32" r="1.5" stroke="currentColor" stroke-width="1"/>
+                            <circle cx="30" cy="32" r="1.5" stroke="currentColor" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <h3 class="cs-service-title">Cloud & Workspace Solutions</h3>
+                    <p class="cs-service-text">Complete administration of Google Workspace, Microsoft 365, and cloud infrastructure. From migration to ongoing management, we optimize your digital workspace for productivity.</p>
+                </div>
+
+                <!-- Cybersecurity & Compliance -->
+                <div class="cs-service-card cs-blue-card">
+                    <div class="cs-service-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 4L32 10V26L20 32L8 26V10L20 4Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 14L26 17V23L20 26L14 23V17L20 14Z" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="20" cy="20" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="cs-service-title">Cybersecurity & Compliance</h3>
+                    <p class="cs-service-text">Comprehensive security solutions including threat detection, data protection, and compliance management. We safeguard your business with enterprise-grade security measures.</p>
+                </div>
+
+                <!-- Network Infrastructure -->
+                <div class="cs-service-card cs-blue-card">
+                    <div class="cs-service-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="20" cy="6" r="3" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="6" cy="26" r="3" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="34" cy="26" r="3" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="20" cy="34" r="3" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 9v5M9 26l8-3M31 26l-8-3M20 31v-5" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="20" cy="20" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="cs-service-title">Network Infrastructure</h3>
+                    <p class="cs-service-text">Professional network design, implementation, and management services. We build reliable, scalable networks that support your business growth and connectivity needs.</p>
+                </div>
+
+                <!-- Business Continuity -->
+                <div class="cs-service-card cs-blue-card">
+                    <div class="cs-service-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="6" y="8" width="28" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M6 16h28M12 12v16M20 12v16M28 12v16" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="20" cy="24" r="3" stroke="currentColor" stroke-width="2"/>
+                            <path d="M17 21l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="cs-service-title">Business Continuity</h3>
+                    <p class="cs-service-text">Disaster recovery planning, backup solutions, and business continuity strategies. We ensure your operations continue smoothly even during unexpected disruptions.</p>
+                </div>
             </div>
-            <ul class="cs-card-group">
-                <li class="cs-item">
-                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/check-circle.svg" alt="icon" width="48" height="48">
-                    <h3 class="cs-h3">100% Satisfaction Rate</h3>
-                    <p class="cs-item-text">
-                        We provide some of the finest quality, most responsive and reliable, and cost effective services and solutions.
-                    </p>
-                </li>
-                <li class="cs-item">
-                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/speedometer.svg" alt="icon" width="48" height="48">
-                    <h3 class="cs-h3">Expert IT Services</h3>
-                    <p class="cs-item-text">
-                        We provide some of the finest quality, most responsive and reliable, and cost effective services and solutions.
-                    </p>
-                </li>
-                <li class="cs-item">
-                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/Like.svg" alt="icon" width="48" height="48">
-                    <h3 class="cs-h3">Highly Recommended</h3>
-                    <p class="cs-item-text">
-                        We provide some of the finest quality, most responsive and reliable, and cost effective services and solutions.
-                    </p>
-                </li>
-            </ul>
         </div>
 
-        <!-- Background Image -->
-        <picture class="cs-background">
-            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting-2-m.jpeg">
-            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting-2.jpeg">
-            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting-2.jpeg" alt="meeting" width="1920" height="1200" aria-hidden="true">
-        </picture>
+        <!-- Background Elements -->
+        <div class="cs-background-elements">
+            <div class="cs-grid-pattern"></div>
+            <div class="cs-floating-shapes">
+                <div class="cs-shape cs-shape-1"></div>
+                <div class="cs-shape cs-shape-2"></div>
+                <div class="cs-shape cs-shape-3"></div>
+            </div>
+        </div>
     </section>
                 
-    <!-- ============================================ -->
-    <!--                Why Choose Us                 -->
-    <!-- ============================================ -->
-
-    <section id="why-choose-1630">
-        <div class="cs-container">
-            <div class="cs-flex">
-                <picture class="cs-picture">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting-8.jpg">
-                    <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting-8.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting-8.jpg" alt="therapy" width="608" height="400">
-                </picture>
-                <div class="cs-content">
-                    <span class="cs-topper">Why Choose Us</span>
-                    <h2 class="cs-title">Experience the Immersive Impact of Stitch Consulting Services on Your Business</h2>
-                    <p class="cs-text">
-                        Aqestic recusandae laudantium optio amet a quisquam saepe aliquid, voluptate praesentium dicta fuga dolor error perspiciatis voluptatem eum cupiditate totam reiciendis quam minus inventore sint rem impedit esse quasi.
-                    </p>
-                </div>
-            </div>
-            <ul class="cs-card-group">
-                <li class="cs-item">
-                    <h3 class="cs-h3">
-                        <picture class="cs-wrapper">
-                            <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/ibm-cloud--databases.svg" alt="icon" width="24" height="24">
-                        </picture>
-                        Answer a Few Questions
-                    </h3>
-                    <p class="cs-item-text">
-                        We welcome and celebrate different perspectives to help our firm, our clients and our people achieve adip iscing elit enduring results.
-                    </p>
-                </li>
-                <li class="cs-item">
-                    <h3 class="cs-h3">
-                        <picture class="cs-wrapper">
-                            <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/ibm--power-with-vpc.svg" alt="icon" width="24" height="24">
-                        </picture>
-                        Complimentary Call
-                    </h3>
-                    <p class="cs-item-text">
-                        We welcome and celebrate different perspectives to help our firm, our clients and our people achieve adip iscing elit enduring results.
-                    </p>
-                </li>
-                <li class="cs-item">
-                    <h3 class="cs-h3">
-                        <picture class="cs-wrapper">
-                            <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/ibm--dynamic-route-server.svg" alt="icon" width="24" height="24">
-                        </picture>
-                        Grow Your Wealth
-                    </h3>
-                    <p class="cs-item-text">
-                        We welcome and celebrate different perspectives to help our firm, our clients and our people achieve adip iscing elit enduring results.
-                    </p>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                Why Choose Us                 -->
-    <!-- ============================================ -->
-
-    <section id="why-choose-1635">
-        <div class="cs-container">
-            <div class="cs-content">
-                <div class="cs-flex">
-                    <span class="cs-topper">Why Choose Us</span>
-                    <h2 class="cs-title">Grow Your Business with Our New Bold Agency</h2>
-                </div>
-                <p class="cs-text">
-                    Aqestic recusandae laudantium optio amet a quisquam saepe aliquid, voluptate praesentium dicta fuga dolor error perspiciatis voluptatem eum cupiditate totam reiciendis quam minus inventore sint rem impedit esse quasi Tenetur sed reprehenderit earum a magni aliquid blanditiis dolores, veritatis soluta autem beatae officia expedita ipsum rerum doloribus sit provident delectus.
-                </p>
-            </div>  
-            <div class="cs-wrapper">
-                <ul class="cs-card-group">
-                    <li class="cs-item">
-                        <picture class="cs-icon-wrapper">
-                            <img class="cs-icon"
-                                    src="/assets/svgs/ibm--dynamic-route-server.svg"
-                                    loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
-                        </picture>
-                        <!-- Text Grouped For Flexbox-->
-                        <div class="cs-text-group">
-                            <h3 class="cs-h3">Answer a Few Questions</h3>
-                            <p class="cs-item-text">
-                                We welcome and celebrate different perspectives to help our firm, our clients and our people adip iscing elit achieve.
-                            </p>
-                        </div>
-                    </li>
-                    <li class="cs-item">
-                        <picture class="cs-icon-wrapper">
-                            <img class="cs-icon" src="/assets/svgs/ibm-cloud--databases.svg"
-                                    loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
-                        </picture>
-                        <!-- Text Grouped For Flexbox-->
-                        <div class="cs-text-group">
-                            <h3 class="cs-h3">Complimentary Call</h3>
-                            <p class="cs-item-text">
-                                We welcome and celebrate different perspectives to help our firm, our clients and our people adip iscing elit achieve.
-                            </p>
-                        </div>
-                    </li>
-                    <li class="cs-item">
-                        <picture class="cs-icon-wrapper">
-                            <img class="cs-icon"
-                                    src="/assets/svgs/ibm--power-with-vpc.svg"
-                                    loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
-                        </picture>
-                        <!-- Text Grouped For Flexbox-->
-                        <div class="cs-text-group">
-                            <h3 class="cs-h3">Grow Your Wealth</h3>
-                            <p class="cs-item-text">
-                                We welcome and celebrate different perspectives to help our firm, our clients and our people adip iscing elit achieve.
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-                <div class="cs-image-group">
-                    <div class="cs-picture-wrapper">
-                        <picture class="cs-picture cs-picture1">
-                            <!--Mobile Image-->
-                            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting9.jpg">
-                            <!--Tablet and above Image-->
-                            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting9.jpg">
-                            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/meeting9.jpg" alt="meeting" width="434" height="414">
-                        </picture>
-                        <div class="cs-box">
-                            <span class="cs-header">Attorney Growth</span>
-                            <span class="cs-desc">Aqestic recusandae lauda </span>
-                        </div>
-                    </div>
-                    <picture class="cs-picture cs-picture2">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer.jpg">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer.jpg">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer.jpg" alt="on computer" width="197" height="197">
-                    </picture>
-                </div>
-            </div>
-        </div>
-    </section>                          
-
-    <!-- ============================================ -->
-    <!--                    Reviews                   -->
-    <!-- ============================================ -->
-
-    <section id="reviews-1641">
-        <div class="cs-container">
-            <picture class="cs-picture">
-                <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/models.jpg">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/models.jpg">
-                <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/ecommerce/models.jpg" alt="models" width="586" height="690">
-            </picture>
-            <div class="cs-content">
-                <span class="cs-topper">Reviews</span>
-                <h2 class="cs-title">What Our Clients Say</h2>
-                <ul class="cs-card-group">
-                    <li class="cs-item">
-                        <picture class="cs-profile">
-                            <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-headshot1.jpeg" alt="profile" width="35" height="40" loading="lazy" decoding="async" aria-hidden="true">
-                        </picture>
-                        <div class="cs-flex-group">
-                            <span class="cs-review">The fashion shop has a diverse range of sizes and styles, which is great for all body types and tastes.</span>
-                            <span class="cs-name">Katrin McWell, Forbes</span>
-                        </div>
-                    </li>
-                    <li class="cs-item">
-                        <picture class="cs-profile">
-                            <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-headshot2.jpeg" alt="profile" width="35" height="40" loading="lazy" decoding="async" aria-hidden="true">
-                        </picture>
-                        <div class="cs-flex-group">
-                            <span class="cs-review">I am a regular at this fashion shop - their stylish clothes and accessories always keep me ahead of the trend.</span>
-                            <span class="cs-name">Madelyn George, ELLE</span>
-                        </div>
-                    </li>
-                    <li class="cs-item">
-                        <picture class="cs-profile">
-                            <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-headshot3.jpeg" alt="profile" width="35" height="40" loading="lazy" decoding="async" aria-hidden="true">
-                        </picture>
-                        <div class="cs-flex-group">
-                            <span class="cs-review">The prices are reasonable for the high-quality products and the customer service is outstanding.</span>
-                            <span class="cs-name">Monica Johns, Cosmopolitan</span>
-                        </div>
-                    </li>
-                    <li class="cs-item">
-                        <picture class="cs-profile">
-                            <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-headshot1.jpeg" alt="profile" width="35" height="40" loading="lazy" decoding="async" aria-hidden="true">
-                        </picture>
-                        <div class="cs-flex-group">
-                            <span class="cs-review">The fashion shop has a diverse range of sizes and styles, which is great for all body types and tastes.</span>
-                            <span class="cs-name">Katrin McWell, Forbes</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-                                
+           
 
     {% include 'sections/cta.html' %}
 {% endblock %}
