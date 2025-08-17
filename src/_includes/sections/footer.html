@@ -2,74 +2,59 @@
 <!--                   Footer                     -->
 <!-- ============================================ -->
 
-<footer id="cs-footer-1339">
+<footer id="cs-footer-1390">
     <div class="cs-container">
-        <!-- Logo Group -->
-        <div class="cs-logo-group">
-            <h2 class="cs-title">Get Finance Solution That Just Makes Sense</h2>
-            <div class="cs-social">
-                <a class="cs-social-link" aria-label="visit facebook profile" href="">
-                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-1a.svg" alt="facebook" width="11" height="11">
-                </a>
-                <a class="cs-social-link" aria-label="visit twitter profile" href="">
-                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-1a.svg" alt="twitter" width="6" height="11">
-                </a>
-                <a class="cs-social-link" aria-label="visit instagram profile" href="">
-                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-1a.svg" alt="instagram" width="11" height="11">
-                </a>
-                <a class="cs-social-link" aria-label="visit youtube profile" href="">
-                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-1a.svg" alt="instagram" width="11" height="11">
-                </a>
-            </div>
-        </div>
-        <!-- Links -->
-        <div class="cs-ul-wrapper">
-            <span class="cs-header">Quick Links</span>
+        <div class="cs-top">
+            <a class="cs-logo" aria-label="go back to home" href="/">
+                <img src="/assets/favicons/winitlogo-light.png" alt="WinIT Consulting Logo" width="210" height="29" decoding="async">
+            </a>
             <ul class="cs-ul">
                 <li class="cs-li">
-                    <a class="cs-link" href="">Services</a>
+                    <a href="/" class="cs-link">Home</a>
                 </li>
                 <li class="cs-li">
-                    <a class="cs-link" href="">Projects</a>
+                    <a href="/about" class="cs-link">About</a>
                 </li>
                 <li class="cs-li">
-                    <a class="cs-link" href="">About Us</a>
+                    <a href="/services" class="cs-link">Services</a>
+                </li>
+                <li class="cs-li">
+                    <a href="/contact" class="cs-link">Contact</a>
                 </li>
             </ul>
         </div>
-        <div class="cs-ul-wrapper">
-            <!-- Contact Info -->
-            <span class="cs-header">Contact</span>
-            <ul class="cs-ul">
-                <li class="cs-li">
-                    <a class="cs-link" href="{{ client.phoneForTel }}">
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-white.svg" alt="phone icon" width="24" height="24">
-                        {{ client.phoneFormatted }}
-                    </a>
-                </li>
-                <li class="cs-li">
-                    <a class="cs-link" href="mailto:{{ client.email }}">
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/email-white.svg" alt="email icon" width="24" height="24">
+        <div class="cs-bottom">
+            <div class="cs-copyright">
+                <div class="cs-policies">
+                    <a href="/terms-of-use/" class="cs-policy-link">Terms of Use</a>
+                    <a href="/privacy-policy/" class="cs-policy-link">Privacy Policy</a>
+                    <a href="/cookie-policy/" class="cs-policy-link">Cookie Policy</a>
+                </div>
+                <span>Copyright © 2025 Callowhill Web Designs LLC</span>
+                <span>Designed by <a href="https://www.callowhillwebdesigns.com" target="_blank" rel="noopener" class="cs-credit-link">Callowhill Web Designs</a> & <a href="https://winit-consulting.com/" target="_blank" rel="noopener" class="cs-credit-link">WinIT Consulting</a></span>
+            </div>
+            <div class="cs-contact">
+                <div class="cs-contact-group">
+                    <a href="mailto:{{ client.email }}" class="cs-contact-link">
+                        <picture class="cs-icon-wrapper">
+                            <img class="cs-icon" src="/assets/svgs/email.svg" alt="email icon" width="24" height="24" aria-hidden="true" decoding="async">
+                        </picture>
                         {{ client.email }}
                     </a>
-                </li>
-                <li class="cs-li">
-                    <!--Make this link go to the google page-->
-                    <a class="cs-link" href="" target="_blank">
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/pin-white.svg" alt="pin icon" width="24" height="24">
-                        Oak Harbor, WA
+                    <a href="tel:{{ client.phoneForTel }}" class="cs-contact-link">
+                        <picture class="cs-icon-wrapper">
+                            <img class="cs-icon" src="/assets/svgs/phone.svg" alt="phone icon" width="24" height="24" aria-hidden="true" decoding="async">
+                        </picture>
+                        {{ client.phoneFormatted }}
                     </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="cs-bottom">
-        <span class="cs-credit">
-            © Copyright 2025 <a href="" class="cs-credit-link" target="_blank">Callowhill Web Designs LLC</a>
-        </span>
-        <div class="cs-bottom-links">
-            <a href="" class="cs-bottom-link">Privacy Policy</a>
-            <a href="" class="cs-bottom-link">Terms Of Use</a>
+                    <span class="cs-contact-link">
+                        <picture class="cs-icon-wrapper">
+                            <img class="cs-icon" src="/assets/svgs/pin.svg" alt="address icon" width="24" height="24" aria-hidden="true" decoding="async">
+                        </picture>
+                        {{ client.address.city }}, {{ client.address.state }}
+                    </span>
+                </div>
+            </div>
         </div>
     </div>
 </footer>

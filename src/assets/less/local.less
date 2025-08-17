@@ -13,6 +13,7 @@
 @media only screen and (min-width: 0rem) {
     #winit-advantage {
         padding: var(--sectionPadding);
+        background: #121921;
         position: relative;
         overflow: hidden;
 
@@ -711,6 +712,190 @@
             grid-template-columns: repeat(3, 1fr);
             max-width: 1200px;
             margin: 0 auto;
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---        Content Pages       -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #content-1400 {
+        padding-top: 200px;
+        padding-bottom: clamp(3.75rem, 7.82vw, 6.25rem);
+        padding-left: 1rem;
+        padding-right: 1rem;
+        background-color: #0F1419;
+        position: relative;
+
+        .cs-container {
+            width: 100%;
+            max-width: (800/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cs-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .cs-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            line-height: 1.2em;
+            margin: 0 auto (32/16rem) auto;
+            color: var(--headerColor);
+            text-align: center;
+        }
+
+        .cs-text {
+            font-size: (16/16rem);
+            line-height: 1.6em;
+            margin: 0 0 (24/16rem) 0;
+            color: var(--bodyTextColorWhite);
+
+            &:last-of-type {
+                margin-bottom: (40/16rem);
+            }
+
+            strong {
+                color: var(--primary);
+                font-weight: 700;
+            }
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            line-height: 1.3em;
+            margin: (48/16rem) 0 (24/16rem) 0;
+            color: var(--headerColor);
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+            font-weight: 600;
+            line-height: 1.3em;
+            margin: (32/16rem) 0 (16/16rem) 0;
+            color: var(--primary);
+        }
+
+        ul, ol {
+            margin: 0 0 (24/16rem) (20/16rem);
+            padding: 0;
+            color: var(--bodyTextColorWhite);
+
+            li {
+                font-size: (16/16rem);
+                line-height: 1.6em;
+                margin-bottom: (8/16rem);
+                color: var(--bodyTextColorWhite);
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .cs-link {
+            color: var(--primary);
+            text-decoration: underline;
+            transition: color 0.3s;
+
+            &:hover {
+                color: #60D8FF;
+            }
+        }
+
+        .cs-policy-nav {
+            width: 100%;
+            max-width: (600/16rem);
+            margin: (24/16rem) auto (40/16rem) auto;
+            padding: (20/16rem);
+            background: rgba(26, 43, 60, 0.3);
+            border: 1px solid rgba(65, 191, 252, 0.2);
+            border-radius: (8/16rem);
+            display: flex;
+            flex-direction: column;
+            gap: (12/16rem);
+            text-align: center;
+        }
+
+        .cs-policy-nav-title {
+            font-size: (18/16rem);
+            font-weight: 600;
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .cs-policy-links {
+            display: flex;
+            flex-direction: column;
+            gap: (8/16rem);
+            align-items: center;
+        }
+
+        .cs-policy-link {
+            font-size: (14/16rem);
+            color: var(--bodyTextColorWhite);
+            text-decoration: none;
+            transition: color 0.3s;
+
+            &:hover {
+                color: var(--primary);
+                text-decoration: underline;
+            }
+
+            &.cs-current {
+                color: var(--primary);
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #content-1400 {
+        .cs-container {
+            max-width: (900/16rem);
+        }
+
+        .cs-policy-nav {
+            padding: (24/16rem);
+        }
+
+        .cs-policy-links {
+            flex-direction: row;
+            gap: (24/16rem);
+            justify-content: center;
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #content-1400 {
+        .cs-container {
+            max-width: (1000/16rem);
+        }
+
+        .cs-text {
+            font-size: (18/16rem);
+        }
+
+        ul, ol {
+            li {
+                font-size: (18/16rem);
+            }
         }
     }
 }

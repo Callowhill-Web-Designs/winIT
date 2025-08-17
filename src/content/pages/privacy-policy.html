@@ -1,0 +1,153 @@
+---
+title: "Privacy Policy | WinIT Consulting"
+description: "Privacy Policy for WinIT Consulting - How we collect, use, and protect your information"
+permalink: "/privacy-policy/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/local.css">
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--               Privacy Content                -->
+    <!-- ============================================ -->
+
+    <section id="content-1400">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h1 class="cs-title">Privacy Policy</h1>
+                
+                <div class="cs-policy-nav">
+                    <h3 class="cs-policy-nav-title">Legal Information</h3>
+                    <div class="cs-policy-links">
+                        <a href="/terms-of-use/" class="cs-policy-link">Terms of Use</a>
+                        <a href="/privacy-policy/" class="cs-policy-link cs-current">Privacy Policy</a>
+                        <a href="/cookie-policy/" class="cs-policy-link">Cookie Policy</a>
+                    </div>
+                </div>
+
+                <div class="cs-date">
+                    <p class="cs-text"><strong>Last Updated:</strong> August 17, 2025</p>
+                </div>
+                
+                <h2>1. Introduction</h2>
+                <p class="cs-text">
+                    WinIT Consulting ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+                </p>
+
+                <h2>2. Information We Collect</h2>
+                
+                <h3>2.1 Personal Information</h3>
+                <p class="cs-text">
+                    We may collect personal information that you voluntarily provide to us when you:
+                </p>
+                <ul>
+                    <li>Contact us through our website forms</li>
+                    <li>Request information about our services</li>
+                    <li>Subscribe to our newsletter</li>
+                    <li>Engage our consulting services</li>
+                </ul>
+                <p class="cs-text">
+                    This information may include: name, email address, phone number, company name, job title, and any other information you choose to provide.
+                </p>
+
+                <h3>2.2 Automatically Collected Information</h3>
+                <p class="cs-text">
+                    When you visit our website, we may automatically collect certain information about your device, including:
+                </p>
+                <ul>
+                    <li>IP address</li>
+                    <li>Browser type and version</li>
+                    <li>Operating system</li>
+                    <li>Pages viewed and time spent on our website</li>
+                    <li>Referring website</li>
+                </ul>
+
+                <h2>3. How We Use Your Information</h2>
+                <p class="cs-text">
+                    We use the information we collect to:
+                </p>
+                <ul>
+                    <li>Provide and maintain our services</li>
+                    <li>Respond to your inquiries and requests</li>
+                    <li>Send you updates about our services (with your consent)</li>
+                    <li>Improve our website and services</li>
+                    <li>Comply with legal obligations</li>
+                    <li>Protect our rights and prevent fraud</li>
+                </ul>
+
+                <h2>4. Information Sharing and Disclosure</h2>
+                <p class="cs-text">
+                    We do not sell, trade, or rent your personal information to third parties. We may share your information in the following circumstances:
+                </p>
+                <ul>
+                    <li><strong>Service Providers:</strong> With trusted third-party service providers who assist us in operating our website and conducting our business</li>
+                    <li><strong>Legal Requirements:</strong> When required by law or to protect our rights, property, or safety</li>
+                    <li><strong>Business Transfers:</strong> In connection with any merger, sale, or acquisition of our business</li>
+                </ul>
+
+                <h2>5. Data Security</h2>
+                <p class="cs-text">
+                    We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.
+                </p>
+
+                <h2>6. Data Retention</h2>
+                <p class="cs-text">
+                    We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law.
+                </p>
+
+                <h2>7. Your Rights</h2>
+                <p class="cs-text">
+                    Depending on your location, you may have the following rights regarding your personal information:
+                </p>
+                <ul>
+                    <li>Access to your personal information</li>
+                    <li>Correction of inaccurate information</li>
+                    <li>Deletion of your personal information</li>
+                    <li>Restriction of processing</li>
+                    <li>Data portability</li>
+                    <li>Objection to processing</li>
+                </ul>
+                <p class="cs-text">
+                    To exercise these rights, please contact us using the information provided below.
+                </p>
+
+                <h2>8. Cookies and Tracking Technologies</h2>
+                <p class="cs-text">
+                    Our website may use cookies and similar tracking technologies to enhance your browsing experience. For more information about our use of cookies, please see our <a href="/cookie-policy/" class="cs-link">Cookie Policy</a>.
+                </p>
+
+                <h2>9. Third-Party Links</h2>
+                <p class="cs-text">
+                    Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these external sites. We encourage you to review the privacy policies of any third-party sites you visit.
+                </p>
+
+                <h2>10. Children's Privacy</h2>
+                <p class="cs-text">
+                    Our services are not directed to individuals under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13, we will take steps to delete such information.
+                </p>
+
+                <h2>11. Changes to This Privacy Policy</h2>
+                <p class="cs-text">
+                    We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.
+                </p>
+
+                <h2>12. Contact Us</h2>
+                <p class="cs-text">
+                    If you have any questions about this Privacy Policy or our privacy practices, please contact us at:
+                </p>
+                <p class="cs-text">
+                    <strong>WinIT Consulting</strong><br>
+                    Email: {{ client.email }}<br>
+                    Phone: {{ client.phoneFormatted }}<br>
+                    Location: {{ client.address.city }}, {{ client.address.state }}
+                </p>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

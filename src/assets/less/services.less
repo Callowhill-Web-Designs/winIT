@@ -1,0 +1,386 @@
+/*-- -------------------------- -->
+<---         Services          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-hero {
+        padding: var(--sectionPadding);
+        padding-top: (200/16rem);
+        background: linear-gradient(135deg, #0F1419 0%, #1A2332 50%, #0F1419 100%);
+        position: relative;
+        overflow: hidden;
+
+        .cs-container {
+            width: 100%;
+            max-width: 80rem;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+
+            /* Remove later */
+            min-height: 60vh;
+        }
+
+        .cs-content {
+            display: flex;
+            flex-direction: column;
+            gap: (16/16rem);
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            max-width: 50rem;
+            margin-bottom: 4rem;
+
+            /* Remove later */
+            display: none;
+        }
+
+        .cs-title {
+            margin-bottom: 1.5rem;
+            color: var(--headerColor);
+            
+            .cs-accent {
+                background: linear-gradient(45deg, var(--primary), #00E5FF);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+        }
+
+        .cs-text {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            color: var(--bodyTextColorWhite);
+            opacity: 0.9;
+        }
+
+        // Tech grid background animation
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(65, 191, 252, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(0, 229, 255, 0.1) 0%, transparent 50%);
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        // Animated IT Background
+        .cs-hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: auto;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            
+            .cs-animated-svg {
+                width: auto;
+                height: 100%;
+                object-fit: cover;
+                object-position: 50%;
+                opacity: 1;
+            }
+        }
+    }
+
+    #services-grid {
+        padding: var(--sectionPadding);
+        background: #0A0E13;
+        position: relative;
+
+        .cs-container {
+            width: 100%;
+            max-width: 80rem;
+            margin: auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .cs-content {
+            display: flex;
+            flex-direction: column;
+            gap: (16/16rem);
+            align-items: center;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .cs-title {
+            color: var(--headerColor);
+            margin-bottom: 1.5rem;
+            
+            .cs-accent {
+                background: linear-gradient(45deg, var(--primary), #00E5FF);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+        }
+
+        .cs-text {
+            font-size: 1.125rem;
+            color: var(--bodyTextColorWhite);
+            opacity: 0.9;
+            max-width: 46.875rem;
+            margin: 0 auto;
+        }
+
+        .cs-services-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .cs-service-card {
+            background: linear-gradient(135deg, rgba(26, 43, 60, 0.8) 0%, rgba(15, 20, 25, 0.9) 100%);
+            border: 1px solid rgba(65, 191, 252, 0.1);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+
+            &:hover {
+                transform: translateY(-10px);
+                border-color: var(--primary);
+                box-shadow: 
+                    0 20px 40px rgba(0, 0, 0, 0.3),
+                    0 0 50px rgba(65, 191, 252, 0.1);
+
+                .cs-service-icon {
+                    transform: scale(1.1) rotate(5deg);
+                    filter: drop-shadow(0 0 20px rgba(65, 191, 252, 0.5));
+                }
+
+                .cs-card-glow {
+                    opacity: 1;
+                }
+            }
+
+            .cs-card-glow {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(45deg, rgba(65, 191, 252, 0.05), rgba(0, 229, 255, 0.05));
+                opacity: 0;
+                transition: opacity 0.4s ease;
+                border-radius: 1.5rem;
+            }
+
+            .cs-service-header {
+                display: flex;
+                align-items: flex-start;
+                gap: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .cs-service-icon {
+                width: 4rem;
+                height: 4rem;
+                background: linear-gradient(135deg, var(--primary), #00E5FF);
+                border-radius: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                transition: all 0.3s ease;
+
+                svg {
+                    width: 2rem;
+                    height: 2rem;
+                    color: #fff;
+                }
+            }
+
+            .cs-service-info {
+                flex: 1;
+            }
+
+            .cs-service-title {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: var(--headerColor);
+                margin-bottom: 0.75rem;
+                font-family: var(--headerFont);
+            }
+
+            .cs-service-subtitle {
+                font-size: 0.875rem;
+                color: var(--primary);
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                margin-bottom: 1rem;
+                font-weight: 600;
+            }
+
+            .cs-service-description {
+                font-size: 1rem;
+                line-height: 1.6;
+                color: var(--bodyTextColorWhite);
+                opacity: 0.9;
+                margin-bottom: 2rem;
+            }
+
+            .cs-features-list {
+                list-style: none;
+                margin-bottom: 2rem;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
+                    margin-bottom: 0.75rem;
+                    font-size: 0.9375rem;
+                    color: var(--bodyTextColorWhite);
+                    opacity: 0.8;
+
+                    &:before {
+                        content: '';
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        background: var(--primary);
+                        border-radius: 50%;
+                        flex-shrink: 0;
+                    }
+                }
+            }
+
+            .cs-service-footer {
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+
+            .cs-button-primary,
+            .cs-button-secondary {
+                padding: 0.75rem 1.5rem;
+                border-radius: 0.5rem;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.9375rem;
+                transition: all 0.3s ease;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+        }
+
+        // Background tech pattern
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(65, 191, 252, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(65, 191, 252, 0.02) 1px, transparent 1px);
+            background-size: 30px 30px;
+            opacity: 0.5;
+            z-index: 1;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #services-hero {
+        .cs-hero-bg {
+            width: 100%;
+            opacity: 0.5;
+        }
+
+        .cs-container {
+            width: 100%;
+            max-width: 80rem;
+            align-items: flex-start;
+            margin: auto;
+        }
+
+        .cs-content {
+            align-items: flex-start;
+            text-align: left;
+        }
+    }
+
+    #services-grid {
+        .cs-services-container {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .cs-service-card {
+            padding: 3rem;
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #services-hero {
+        padding-top: (250/16rem);
+
+        .cs-text {
+            font-size: 1.25rem;
+        }
+
+        .cs-hero-bg {
+            opacity: 0.6;
+        }
+    }
+
+    #services-grid {
+        .cs-services-container {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .cs-service-card {
+            .cs-service-header {
+                gap: 2rem;
+            }
+
+            .cs-service-icon {
+                width: 5rem;
+                height: 5rem;
+
+                svg {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+            }
+
+            .cs-service-title {
+                font-size: 1.75rem;
+            }
+
+            .cs-service-description {
+                font-size: 1.125rem;
+            }
+        }
+    }
+}
+
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #services-grid {
+        .cs-services-container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+    }
+}

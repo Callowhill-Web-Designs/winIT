@@ -1,0 +1,94 @@
+---
+title: "Website Development | WinIT Consulting"
+description: "Custom website design and development services. We create responsive, modern websites that enhance your online presence and drive business growth."
+permalink: "/services/website-development/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/about.css">
+    <script defer src="/assets/js/about-animations.js"></script>
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--            Website Development               -->
+    <!-- ============================================ -->
+
+    <section id="our-story">
+        <div class="cs-container">
+            <div class="cs-content">
+                <div class="cs-story-wrapper">
+                    <div class="cs-text-wrapper">
+                        <span class="cs-topper">
+                            <svg class="cs-circuit-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="4" width="16" height="12" rx="1" stroke="currentColor" stroke-width="1"/>
+                                <path d="M2 8h16" stroke="currentColor" stroke-width="1"/>
+                                <circle cx="4" cy="6" r="0.5" fill="currentColor"/>
+                                <circle cx="6" cy="6" r="0.5" fill="currentColor"/>
+                                <circle cx="8" cy="6" r="0.5" fill="currentColor"/>
+                                <path d="M6 10l2 2 2-2" stroke="currentColor" stroke-width="1"/>
+                                <path d="M14 10l-2 2-2-2" stroke="currentColor" stroke-width="1"/>
+                            </svg>
+                            Website Development
+                            <svg class="cs-circuit-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="4" width="16" height="12" rx="1" stroke="currentColor" stroke-width="1"/>
+                                <path d="M2 8h16" stroke="currentColor" stroke-width="1"/>
+                                <circle cx="4" cy="6" r="0.5" fill="currentColor"/>
+                                <circle cx="6" cy="6" r="0.5" fill="currentColor"/>
+                                <circle cx="8" cy="6" r="0.5" fill="currentColor"/>
+                                <path d="M6 10l2 2 2-2" stroke="currentColor" stroke-width="1"/>
+                                <path d="M14 10l-2 2-2-2" stroke="currentColor" stroke-width="1"/>
+                            </svg>
+                        </span>
+                        <h2 class="cs-title">
+                            <span class="cs-accent">Modern</span> Websites That Drive Business Growth
+                        </h2>
+                        <p class="cs-text">
+                            Your website is often the first impression potential customers have of your business. Our Website Development services create modern, responsive, and performance-optimized websites that not only look great but also convert visitors into customers and support your business objectives with measurable results.
+                        </p>
+                        <p class="cs-text">
+                            We combine cutting-edge design with robust development practices to create websites that perform across all devices and platforms. From simple business websites to complex web applications, our team delivers solutions that are built for speed, security, and scalability while providing an exceptional user experience.
+                        </p>
+                        <p class="cs-text">
+                            Our development process focuses on understanding your brand, target audience, and business goals to create websites that truly represent your organization. We use modern technologies and best practices to ensure your website is fast, secure, search engine optimized, and easy to maintain. Contact us to see our sample websites.
+                        </p>
+                    </div>
+
+                    <div class="cs-story-stats">
+                        <div class="cs-stat-item">
+                            <div class="cs-stat-number" data-count="150+">0</div>
+                            <span class="cs-stat-label">Websites Built</span>
+                        </div>
+                        <div class="cs-stat-item">
+                            <div class="cs-stat-number" data-count="99">0</div>
+                            <span class="cs-stat-label">PageSpeed Score</span>
+                        </div>
+                        <div class="cs-stat-item">
+                            <div class="cs-stat-number" data-count="99.9%">0</div>
+                            <span class="cs-stat-label">Uptime Guaranteed</span>
+                        </div>
+                        <div class="cs-stat-item">
+                            <div class="cs-stat-number" data-count="60%">0</div>
+                            <span class="cs-stat-label">AVG. CTR Increase</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Elements -->
+        <div class="cs-background-elements">
+            <div class="cs-floating-shapes">
+                <div class="cs-shape cs-shape-1"></div>
+                <div class="cs-shape cs-shape-2"></div>
+                <div class="cs-shape cs-shape-3"></div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'sections/cta.html' %}
+
+{% endblock %}
