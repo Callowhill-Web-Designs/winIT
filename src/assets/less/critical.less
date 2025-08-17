@@ -117,10 +117,9 @@
         .cs-stats {
             width: 100%;
             max-width: (500/16rem);
-            height: 80px;
             display: flex;
-            justify-content: center;
-            align-items: fle;
+            justify-content: space-between;
+            align-items: flex-start;
             gap: (32/16rem);
             opacity: 0;
             animation: fadeInUp 0.8s ease-out 1s forwards;
@@ -139,7 +138,6 @@
             font-size: clamp(2rem, 4vw, 3rem);
             font-weight: 800;
             line-height: 1em;
-            width: 100%;
             color: var(--primary);
             font-family: var(--headerFont);
         }
@@ -147,7 +145,6 @@
         .cs-stat-label {
             font-size: (14/16rem);
             font-weight: 500;
-            max-width: 120px;
             text-transform: uppercase;
             letter-spacing: 0.1em;
             color: rgba(255, 255, 255, 0.7);
@@ -322,10 +319,6 @@
         .cs-stats {
             max-width: (600/16rem);
             gap: (48/16rem);
-        }
-
-        .cs-stat-label {
-            max-width: none;
         }
     }
 }
