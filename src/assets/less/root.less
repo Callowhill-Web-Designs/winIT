@@ -1210,6 +1210,18 @@ html {
             display: inline-block;
             position: relative;
 
+            /* Button reset styles for dropdown triggers */
+            &[role="button"], 
+            &:is(button) {
+                background: none;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                text-align: inherit;
+                font-family: inherit;
+                padding: 0;
+            }
+
             &.cs-active {
                 color: var(--primary);
             }
@@ -1736,6 +1748,18 @@ html {
             align-items: center;
             position: relative;
             transition: color 0.3s;
+
+            /* Button reset styles for dropdown triggers */
+            &[role="button"], 
+            &:is(button) {
+                background: none;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                text-align: inherit;
+                font-family: inherit;
+                padding: 0;
+            }
 
             &:hover {
                 color: var(--primary);
