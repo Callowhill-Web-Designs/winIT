@@ -142,34 +142,13 @@
         }
 
         .cs-button-primary {
-            align-self: center;
-            font-size: (16/16rem);
-            font-weight: 700;
             text-decoration: none;
-            color: #fff;
-            background: linear-gradient(135deg, var(--primary) 0%, #60D8FF 100%);
             border: none;
-            border-radius: (50/16rem);
-            padding: (16/16rem) (32/16rem);
             display: inline-flex;
             align-items: center;
             gap: (12/16rem);
-            cursor: pointer;
-            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(135deg, #60D8FF 0%, var(--primary) 100%);
-                opacity: 0;
-                transition: opacity 0.3s ease;
-            }
 
             &:hover {
                 transform: translateY(-2px);

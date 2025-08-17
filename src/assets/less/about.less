@@ -112,11 +112,18 @@
             padding: (24/16rem) (20/16rem);
             text-align: center;
             border: 1px solid rgba(65, 191, 252, 0.2);
-            transition: all 0.3s ease;
+            transform: translateY(0px);
+            will-change: transform, box-shadow;
+            transition: 
+                transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.3s ease;
 
-            &:hover {
-                transform: translateY(-4px);
+            &:hover,
+            &.entrance-complete:hover {
+                transform: translateY(-4px) !important;
                 box-shadow: 0 12px 32px rgba(65, 191, 252, 0.15);
+                border-color: rgba(65, 191, 252, 0.3);
             }
         }
 
@@ -223,6 +230,7 @@
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
     #our-story {
+        padding-top: (250/16rem);
         .cs-story-wrapper {
             flex-direction: row;
             align-items: flex-start;
@@ -497,60 +505,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-
-        .cs-button-primary {
-            font-size: (16/16rem);
-            font-weight: 600;
-            line-height: 1em;
-            text-decoration: none;
-            text-align: center;
-            color: #fff;
-            min-width: (250/16rem);
-            padding: (18/16rem) (32/16rem);
-            background: linear-gradient(135deg, var(--primary) 0%, #60D8FF 100%);
-            border-radius: (8/16rem);
-            box-shadow: 0 8px 32px rgba(65, 191, 252, 0.3);
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            gap: (12/16rem);
-            position: relative;
-            z-index: 1;
-            transition: all 0.3s ease;
-            overflow: hidden;
-
-            &:before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(135deg, #60D8FF 0%, var(--primary) 100%);
-                opacity: 0;
-                transition: opacity 0.3s ease;
-                z-index: -1;
-            }
-
-            &:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 12px 40px rgba(65, 191, 252, 0.4);
-
-                &:before {
-                    opacity: 1;
-                }
-
-                .cs-arrow {
-                    transform: translateX(4px);
-                }
-            }
-
-            .cs-arrow {
-                width: (16/16rem);
-                height: auto;
-                transition: transform 0.3s ease;
-            }
         }
 
         .cs-background-elements {

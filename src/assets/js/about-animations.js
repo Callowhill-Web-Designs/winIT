@@ -85,12 +85,18 @@ document.addEventListener('DOMContentLoaded', function() {
     statItems.forEach((item, index) => {
         item.style.opacity = '0';
         item.style.transform = 'translateY(20px)';
-        item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        item.style.transition = 'opacity 0.6s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease';
         
         // Staggered entrance animation
         setTimeout(() => {
             item.style.opacity = '1';
             item.style.transform = 'translateY(0)';
+            
+            // After entrance animation, restore CSS hover transitions
+            setTimeout(() => {
+                item.style.transition = '';
+                item.classList.add('entrance-complete');
+            }, 600); // After entrance animation completes
         }, 100 + (index * 100));
     });
     
