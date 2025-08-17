@@ -916,7 +916,8 @@ html {
         }
 
         .cs-link-icon {
-            width: (16/16rem);
+            width: (20/16rem);
+            filter: brightness(0) invert(1);
             height: auto;
             display: block;
         }
@@ -1623,7 +1624,8 @@ html {
         }
 
         .cs-link-icon {
-            width: (16/16rem);
+            width: (20/16rem);
+            filter: brightness(0) invert(1);
             height: auto;
             display: block;
         }
@@ -1861,6 +1863,31 @@ html {
             padding: (32/16rem);
             border: 1px solid rgba(65, 191, 252, 0.2);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .cs-topper {
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: (20/16rem);
+            color: var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: (12/16rem);
+        }
+
+        .cs-circuit-icon {
+            width: (20/16rem);
+            height: (20/16rem);
+            color: var(--primary);
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
         }
 
         .cs-title {

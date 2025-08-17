@@ -33,6 +33,31 @@
             margin-bottom: 4rem;
         }
 
+        .cs-topper {
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: (20/16rem);
+            color: var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: (12/16rem);
+        }
+
+        .cs-circuit-icon {
+            width: (20/16rem);
+            height: (20/16rem);
+            color: var(--primary);
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
         .cs-title {
             margin-bottom: 1.5rem;
             color: var(--headerColor);
@@ -110,6 +135,31 @@
             margin-bottom: 4rem;
         }
 
+        .cs-topper {
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: (20/16rem);
+            color: var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: (12/16rem);
+        }
+
+        .cs-circuit-icon {
+            width: (20/16rem);
+            height: (20/16rem);
+            color: var(--primary);
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
         .cs-title {
             color: var(--headerColor);
             margin-bottom: 1.5rem;
@@ -143,14 +193,32 @@
             padding: 2.5rem;
             position: relative;
             overflow: hidden;
-            transition: all 0.4s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(65, 191, 252, 0.1), transparent);
+                transition: left 0.6s ease;
+                pointer-events: none;
+            }
 
             &:hover {
-                transform: translateY(-10px);
+                transform: translateY(-10px) scale(1.02);
                 border-color: var(--primary);
                 box-shadow: 
                     0 20px 40px rgba(0, 0, 0, 0.3),
-                    0 0 50px rgba(65, 191, 252, 0.1);
+                    0 0 50px rgba(65, 191, 252, 0.15),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+
+                &::before {
+                    left: 100%;
+                }
 
                 .cs-service-icon {
                     transform: scale(1.1) rotate(5deg);
@@ -158,6 +226,15 @@
                 }
 
                 .cs-card-glow {
+                    opacity: 1;
+                }
+
+                .cs-service-title {
+                    color: var(--primary);
+                    text-shadow: 0 0 10px rgba(65, 191, 252, 0.3);
+                }
+
+                .cs-service-description {
                     opacity: 1;
                 }
             }
@@ -172,6 +249,7 @@
                 opacity: 0;
                 transition: opacity 0.4s ease;
                 border-radius: 1.5rem;
+                pointer-events: none;
             }
 
             .cs-service-header {
@@ -303,6 +381,10 @@
         .cs-content {
             align-items: flex-start;
             text-align: left;
+        }
+
+        .cs-topper {
+            justify-content: flex-start;
         }
 
         .cs-hero-bg {
