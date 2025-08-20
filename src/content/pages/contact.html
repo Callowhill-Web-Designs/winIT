@@ -30,11 +30,15 @@ eleventyNavigation:
                 </div>
 
                 <div class="cs-form-wrapper">
-                    <form class="cs-form" name="Contact Form" netlify>
+                    <form class="cs-form" name="Contact Form" netlify netlify-honeypot="phone">
                         <div class="cs-input-group">
                             <div class="cs-input-wrapper">
                                 <label for="name" class="cs-label">Full Name *</label>
                                 <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            </div>
+                            <div class="cs-input-wrapper cs-phone">
+                                <label for="phone" class="cs-label">Phone *</label>
+                                <input type="phone" id="phone" name="phone" placeholder="Enter your phone number">
                             </div>
                             <div class="cs-input-wrapper">
                                 <label for="email" class="cs-label">Email Address *</label>
