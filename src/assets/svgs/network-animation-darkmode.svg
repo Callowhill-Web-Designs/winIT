@@ -1,0 +1,140 @@
+<svg viewBox="0 0 1280 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Background grid -->
+        <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(65, 191, 252, 0.08)" stroke-width="1"/>
+            </pattern>
+            <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#41BFFC;stop-opacity:0.8" />
+                <stop offset="100%" style="stop-color:#60D8FF;stop-opacity:0.2" />
+            </linearGradient>
+            <filter id="glow">
+                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                <feMerge> 
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+        
+        <!-- Central server/computer -->
+        <g class="server-group">
+            <!-- Server base -->
+            <rect x="540" y="200" width="200" height="160" rx="12" fill="url(#glowGradient)" opacity="0.6">
+                <animate attributeName="opacity" values="0.4;0.8;0.4" dur="4s" repeatCount="indefinite"/>
+            </rect>
+            
+            <!-- Server details -->
+            <rect x="555" y="220" width="170" height="12" rx="6" fill="#41BFFC" opacity="0.7">
+                <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.5s" repeatCount="indefinite"/>
+            </rect>
+            <rect x="555" y="240" width="130" height="8" rx="4" fill="#60D8FF" opacity="0.5">
+                <animate attributeName="opacity" values="0.2;0.7;0.2" dur="3s" repeatCount="indefinite"/>
+            </rect>
+            <rect x="555" y="255" width="100" height="8" rx="4" fill="#41BFFC" opacity="0.4">
+                <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2.2s" repeatCount="indefinite"/>
+            </rect>
+            
+            <!-- Status lights -->
+            <circle cx="710" cy="230" r="6" fill="#00FF88" opacity="0.6">
+                <animate attributeName="opacity" values="0.2;0.8;0.2" dur="1.8s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="710" cy="250" r="6" fill="#41BFFC" opacity="0.5">
+                <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.3s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="710" cy="270" r="6" fill="#FFD700" opacity="0.4">
+                <animate attributeName="opacity" values="0.1;0.6;0.1" dur="2.8s" repeatCount="indefinite"/>
+            </circle>
+        </g>
+        
+        <!-- Floating data nodes - distributed across the background -->
+        <g class="data-nodes">
+            <!-- Node 1 - Top Left -->
+            <circle cx="200" cy="120" r="16" fill="#41BFFC" filter="url(#glow)" opacity="0.5">
+                <animateTransform attributeName="transform" type="translate" values="0,0; 15,-8; 0,0" dur="5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4s" repeatCount="indefinite"/>
+            </circle>
+            
+            <!-- Node 2 - Top Right -->
+            <circle cx="1080" cy="100" r="12" fill="#60D8FF" filter="url(#glow)" opacity="0.4">
+                <animateTransform attributeName="transform" type="translate" values="0,0; -12,10; 0,0" dur="6s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3.5s" repeatCount="indefinite"/>
+            </circle>
+            
+            <!-- Node 3 - Bottom Left -->
+            <circle cx="150" cy="450" r="10" fill="#00FF88" filter="url(#glow)" opacity="0.4">
+                <animateTransform attributeName="transform" type="translate" values="0,0; 18,5; 0,0" dur="4.5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3.8s" repeatCount="indefinite"/>
+            </circle>
+            
+            <!-- Node 4 - Bottom Right -->
+            <circle cx="1100" cy="480" r="18" fill="#FFD700" filter="url(#glow)" opacity="0.5">
+                <animateTransform attributeName="transform" type="translate" values="0,0; -10,-15; 0,0" dur="5.5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4.2s" repeatCount="indefinite"/>
+            </circle>
+            
+            <!-- Additional nodes for fuller background -->
+            <circle cx="400" cy="500" r="8" fill="#41BFFC" filter="url(#glow)" opacity="0.3">
+                <animateTransform attributeName="transform" type="translate" values="0,0; 8,12; 0,0" dur="7s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.1;0.5;0.1" dur="5s" repeatCount="indefinite"/>
+            </circle>
+            
+            <circle cx="900" cy="80" r="14" fill="#60D8FF" filter="url(#glow)" opacity="0.4">
+                <animateTransform attributeName="transform" type="translate" values="0,0; -15,6; 0,0" dur="6.5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.2;0.6;0.2" dur="4.5s" repeatCount="indefinite"/>
+            </circle>
+        </g>
+        
+        <!-- Connection lines -->
+        <g class="connections" stroke="#41BFFC" stroke-width="1" fill="none" opacity="0.3">
+            <!-- Lines connecting to central server -->
+            <path d="M 200 120 Q 350 160 540 240">
+                <animate attributeName="stroke-dasharray" values="0,1000; 1000,0" dur="8s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.1;0.5;0.1" dur="6s" repeatCount="indefinite"/>
+            </path>
+            
+            <path d="M 1080 100 Q 850 150 740 220">
+                <animate attributeName="stroke-dasharray" values="0,800; 800,0" dur="7s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.1;0.4;0.1" dur="5s" repeatCount="indefinite"/>
+            </path>
+            
+            <path d="M 150 450 Q 300 350 540 320">
+                <animate attributeName="stroke-dasharray" values="0,600; 600,0" dur="6s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.1;0.4;0.1" dur="4.5s" repeatCount="indefinite"/>
+            </path>
+            
+            <path d="M 1100 480 Q 900 400 740 350">
+                <animate attributeName="stroke-dasharray" values="0,700; 700,0" dur="7.5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.1;0.3;0.1" dur="5.5s" repeatCount="indefinite"/>
+            </path>
+        </g>
+        
+        <!-- Floating particles across the entire background -->
+        <g class="particles">
+            <circle cx="50" cy="300" r="3" fill="#41BFFC" opacity="0.3">
+                <animateTransform attributeName="transform" type="translate" values="0,0; 1200,0; 0,0" dur="15s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0.6;0" dur="15s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="1200" cy="200" r="2" fill="#60D8FF" opacity="0.25">
+                <animateTransform attributeName="transform" type="translate" values="0,0; -1150,200; 0,0" dur="18s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0.5;0" dur="18s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="100" cy="100" r="4" fill="#00FF88" opacity="0.35">
+                <animateTransform attributeName="transform" type="translate" values="0,0; 1080,400; 0,0" dur="20s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0;0.7;0" dur="20s" repeatCount="indefinite"/>
+            </circle>
+        </g>
+        
+        <!-- Holographic elements -->
+        <g class="holo-elements">
+            <!-- Large rotating rings around central area -->
+            <circle cx="640" cy="300" r="150" fill="none" stroke="#41BFFC" stroke-width="1" opacity="0.15">
+                <animateTransform attributeName="transform" type="rotate" values="0 640 300; 360 640 300" dur="30s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.05;0.25;0.05" dur="8s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="640" cy="300" r="200" fill="none" stroke="#60D8FF" stroke-width="1" opacity="0.1">
+                <animateTransform attributeName="transform" type="rotate" values="360 640 300; 0 640 300" dur="40s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.03;0.2;0.03" dur="10s" repeatCount="indefinite"/>
+            </circle>
+        </g>
+    </svg>
