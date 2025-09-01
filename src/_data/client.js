@@ -1,6 +1,6 @@
 module.exports = {
     name: "WinIT Consulting",
-    email: "info@winit-consulting.com",
+    email: "contact-us@winit-consulting.com",
     phoneForTel: "463-213-9946",
     phoneFormatted: "(463) 213-9946",
     address: {
