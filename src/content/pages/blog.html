@@ -1,0 +1,159 @@
+---
+title: "Blog | WinIT Consulting"
+description: "Learn from our expert articles on IT solutions, cybersecurity, cloud services, and more to help your business thrive in the digital age."
+permalink: "/blog/"
+eleventyNavigation:
+    key: Blog
+    order: 400
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <script defer src="/assets/js/blog.js"></script>
+{% endblock %}
+
+{% block body %}
+    <!-- ============================================ -->
+    <!--                   Hero                       -->
+    <!-- ============================================ -->
+
+    <section id="blog-hero">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h1 class="cs-title">Insights & Innovation</h1>
+                <p class="cs-text">
+                    Stay ahead of the curve with expert insights on IT trends, cybersecurity, cloud solutions, and digital transformation strategies.
+                </p>
+            </div>
+        </div>
+
+        <!-- Background Elements -->
+        <div class="cs-background-elements">
+            <div class="cs-grid-pattern"></div>
+            <div class="cs-floating-shapes">
+                <div class="cs-shape cs-shape-1"></div>
+                <div class="cs-shape cs-shape-2"></div>
+                <div class="cs-shape cs-shape-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                 Blog Content                 -->
+    <!-- ============================================ -->
+
+    <section id="blog-content">
+        <div class="cs-container">
+            <!-- Search and Filter Bar -->
+            <div class="cs-filter-bar">
+                <div class="cs-search-wrapper">
+                    <input type="text" id="blog-search" class="cs-search-input" placeholder="Search articles...">
+                    <button class="cs-search-button" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Category Tabs -->
+                <div class="cs-category-tabs-wrapper">
+                    <div class="cs-category-tabs">
+                        <button class="cs-tab cs-tab-active" data-category="all">All Articles</button>
+                        {% set uniqueTags = [] %}
+                        {% for post in collections.post %}
+                            {% for tag in post.data.tags %}
+                                {% if tag != 'post' and tag != 'featured' and tag != 'sitemap' and tag not in uniqueTags %}
+                                    {% set uniqueTags = (uniqueTags.push(tag), uniqueTags) %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                        {% for tag in uniqueTags %}
+                            <button class="cs-tab" data-category="{{ tag }}">{{ tag | title }}</button>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="cs-blog-grid" id="blog-grid">
+                {% if collections.post | length == 0 %}
+                    <div class="cs-no-posts">
+                        <h2>No Articles Found</h2>
+                        <p>Check back soon for new content!</p>
+                    </div>
+                {% else %}
+                    {%- for post in collections.post | reverse -%}
+                        <article class="cs-blog-card" data-tags="{{ post.data.tags | join(',') }}">
+                            <div class="cs-card-image">
+                                <picture>
+                                    <!--Mobile Image-->
+                                    <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 400, height: 250 }) | avif %}" type="image/avif">
+                                    <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 400, height: 250 }) | webp %}" type="image/webp">
+                                    <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 400, height: 250 }) | jpeg %}" type="image/jpeg">
+                                    <!--Desktop Image-->
+                                    <source media="(min-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 600, height: 300 }) | avif %}" type="image/avif">
+                                    <source media="(min-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 600, height: 300 }) | webp %}" type="image/webp">
+                                    <source media="(min-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 600, height: 300 }) | jpeg %}" type="image/jpeg">
+                                    <img src="{% getUrl post.data.image | resize({ width: 600, height: 300 }) | jpeg %}" alt="{{ post.data.alt }}" width="600" height="300" loading="lazy" decoding="async">
+                                </picture>
+                                <div class="cs-card-overlay">
+                                    <a href="{{ post.url }}" class="cs-card-link" aria-label="Read {{ post.data.title }}"></a>
+                                </div>
+                            </div>
+                            
+                            <div class="cs-card-content">
+
+                                <h2 class="cs-card-title">
+                                    <a href="{{ post.url }}">{{ post.data.title }}</a>
+                                </h2>
+
+                                <div class="cs-card-meta">
+                                    <div class="cs-author-info">
+                                        <div class="cs-author-icon">
+                                            <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16,4A5,5,0,1,1,11,9,5,5,0,0,1,16,4Z" fill="currentColor"/>
+                                                <path d="M26,30H6a1,1,0,0,1-1-1.21l.69-5.53A8,8,0,0,1,13.59,16h4.82A8,8,0,0,1,26.31,23.26L27,28.79A1,1,0,0,1,26,30Z" fill="currentColor"/>
+                                            </svg>
+                                        </div>
+                                        <span class="cs-author">{{ post.data.author }}</span>
+                                    </div>
+                                    <span class="cs-date">{{ post.date | postDate }}</span>
+                                </div>
+
+                                <p class="cs-card-description">
+                                    {{ post.data.description }}
+                                </p>
+                                
+                                <div class="cs-card-tags">
+                                    {% for tag in post.data.tags %}
+                                        {% if tag != 'post' and tag != 'featured' and tag != 'sitemap' %}
+                                            <span class="cs-tag">{{ tag }}</span>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                                
+                                <a href="{{ post.url }}" class="cs-read-more">
+                                    Read More
+                                    <svg class="cs-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 1L15 8L8 15M15 8H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
+                    {%- endfor -%}
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Background Elements -->
+        <div class="cs-background-elements">
+            <div class="cs-floating-shapes">
+                <div class="cs-shape cs-shape-4"></div>
+                <div class="cs-shape cs-shape-5"></div>
+                <div class="cs-shape cs-shape-6"></div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
